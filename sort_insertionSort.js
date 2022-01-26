@@ -22,10 +22,4 @@ function insertionSort(arr){
     return arr
 }
 
-
-
-
-
-
-
 insertionSort([1, 2, 3, 4, 5])
