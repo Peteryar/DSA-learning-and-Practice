@@ -31,9 +31,6 @@ function reduceString(str){
     }
 
     while(p2<tempStr.length){
-        console.log('i------------->', i)
-        console.log('str', tempStr)
-        console.log('p1, p2', p1, p2)
        if(tempStr[p1] == tempStr[p2]){
 
            exemptChar = exemptChar+str[p1];
@@ -44,12 +41,10 @@ function reduceString(str){
           tempStr = exemptChar + tempStr.substr(p1)
 
        }else{
-           console.log('i ran---->')
            counter[tempStr[p1]]+=1;
            counter[tempStr[p2]]+=1;
 
            let reducedChar = getReducedChar(counter);
-//         console.log('reducedChar', reducedChar);
 
            tempStr = exemptChar + reducedChar + tempStr.substr(p2+1);
            exemptChar = ''
@@ -57,10 +52,6 @@ function reduceString(str){
            p2 = 1
            counter = {a:0, b:0, c:0}
        }
-       console.log('str', tempStr)
-       console.log('exemptChar', exemptChar)
-//        console.log('counter', counter)
-       i++
     }
     return tempStr
 }
