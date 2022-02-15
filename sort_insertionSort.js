@@ -6,20 +6,18 @@
 // compare item at j to j-1 and insert it in it's possible position
 
 function insertionSort(arr){
-    for(let i = 0; i<arr.length; i++){
-        for(let j=i+1; j>0; j--){
-            if(!arr[j]){
-                break
-            }
-            if(arr[j] < arr[j-1]){
-                [arr[j], arr[j-1]] = [arr[j-1], arr[j]]
-            }
-             console.log(arr)
-        }
-        console.log('outer---------->')
-    }
+   for(let i = 1; i<arr.length; i++){
+       var currentEl = arr[i]
 
-    return arr
+       for(var j = i-1; j>= 0 && arr[j] > currentEl; j-- ){
+          arr[j+1] = arr[j]
+          console.log('j', j)
+       }
+      console.log('arr', arr)
+       arr[j] = currentEl
+   } 
+
+   return arr
 }
 
-insertionSort([1, 2, 3, 4, 5])
+console.log(insertionSort([2, 5, 3, 7]))
