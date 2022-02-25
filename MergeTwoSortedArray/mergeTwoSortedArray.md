@@ -20,6 +20,6 @@
      - else push arr2[j] to newArr and increment j by one
 6. return the newArr at the end of the function
 
-## BigO of mergeTwoSortedArray
+## BigO of mergeTwoSortedArray Solution
 
 > O(n+m)
