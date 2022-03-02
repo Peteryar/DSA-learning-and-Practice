@@ -22,8 +22,7 @@
      - if newArr.length > 1, run a forLoop that starts by 0 and increament itself by 2
         - push into newArr what is return from passing newArr[i] and newArr[i+1]|| emptyArr if newArr[i+1] is undefined into MergedTwoSorted Array
     -  return the function by passing newArr as argument, this will only run if newArr.length is still greater than 1
-6. return the newArr[0] at the end of your code
 
-## BigO of mergeTwoSortedArray Solution
+## BigO of mergeSort Solution
 
-> O(n+m)
+> O(nlogn)

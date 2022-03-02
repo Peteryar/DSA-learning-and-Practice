@@ -49,4 +49,7 @@ function mergeSort(arr){
     })(newArr)
       
   }
- console.log('sorted', mergeSort([5, 4, 3, 6]))
+
+const data = Array.apply(null, {length:100000}).map(a=>Math.floor(Math.random()*100000))
+console.log('mergeSortData===>', data)
+console.log('sorted', mergeSort(data))
