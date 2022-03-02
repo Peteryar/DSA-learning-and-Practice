@@ -5,22 +5,23 @@ function mergeSort(arr){
    
        let i = 0;
        let j = 0;
-  
-       console.log('arr1', arr1[i])
-       console.log('arr2', arr2[j])
-  
        
-    //    while(arr1[i] || arr2[j]){
-    //         console.log('i', arr[i])
-    //         console.log('j', arr[j])
-    //         if(arr1[i] < arr2[j]){
-    //             mergedArr.push(arr[i])
-    //             i++
-    //         }else{
-    //             mergedArr.push(arr2[j])
-    //             j++
-    //         }
-    //    }
+       while(arr1[i] || arr2[j]){
+          if(!arr1[i]){
+            mergedArr.push(arr2[j])
+            j++
+          }else if(!arr2[j]){
+            mergedArr.push(arr1[i]);
+            i++
+          }
+            else if(arr1[i] < arr2[j]){
+                mergedArr.push(arr1[i])
+                i++
+            }else{
+                mergedArr.push(arr2[j])
+                j++
+            }
+       }
       
       return mergedArr
     } 
@@ -31,17 +32,21 @@ function mergeSort(arr){
         newArr.push([arr[i]])     
      }
   
-    return (function(mArr){
-      // for(let i=0; i<arr.length; i++){
-      //   console.log(arr[i])
-        
-      // }
-  
-      const merged = mergeSortedArray(mArr[0], mArr[1])
-  
-      console.log(merged)
+     return (function sort (sortedArr){
+       
+       if(sortedArr.length <= 1){
+         return sortedArr[0]
+       }
+
+       newArr = []
+    
+      for(let i=0; i<sortedArr.length; i+=2){
+        newArr.push(mergeSortedArray(sortedArr[i], sortedArr[i+1]?sortedArr[i+1]:[]))
+      }
+   
+      return sort(newArr)
      
     })(newArr)
       
   }
-  mergeSort([5, 4, 3, 6])
+ console.log('sorted', mergeSort([5, 4, 3, 6]))
