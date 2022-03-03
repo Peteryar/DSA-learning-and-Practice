@@ -19,7 +19,7 @@
 6. Recursive function should
      - return newArr[0] if newArr.length  is less than or equal zero
      - sets newArr to an empty array
-     - if newArr.length > 1, run a forLoop that starts by 0 and increament itself by 2
+     - if newArr.length > 1, run a forLoop that starts by 0 and increament itself by 2 until it hits the length of newArr
         - push into newArr what is return from passing newArr[i] and newArr[i+1]|| emptyArr if newArr[i+1] is undefined into MergedTwoSorted Array
     -  return the function by passing newArr as argument, this will only run if newArr.length is still greater than 1
 
