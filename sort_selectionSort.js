@@ -27,6 +27,9 @@ function selectionSort(arr) {
     return arr
 }
 
+const data = Array.apply(null, {length:100}).map(a=>Math.floor(Math.random()*100))
+console.log('mergeSortData===>', data)
+
 console.log(selectionSort([5, 2, 3, 1, 9, 0]))
 
 //[1, 2, 3, 5]
