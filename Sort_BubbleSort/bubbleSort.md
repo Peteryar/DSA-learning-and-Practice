@@ -22,6 +22,6 @@
   - break out of the outer loop if noSwap so as to avoid unnecessary loop after array is already sorted
 3. return arr at the end
 
-## BigO of insertionSort Solution
+## BigO of Bubble Sort Solution
 
 > O(n)
