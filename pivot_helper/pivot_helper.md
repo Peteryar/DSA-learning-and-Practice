@@ -24,7 +24,7 @@
 6. Outside the forloop swap the arr[0] and arr[pivotIndex]
 3. return arr at the end
 
-## BigO of p Solution
+## BigO of pivot_helper Solution
 Time complexity
 > O(n)
 space complexity
