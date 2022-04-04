@@ -2,6 +2,7 @@
 > write a function that takes an array of integers and a pivot index or point number and return a new array where all the numbers greater than the pivot index value are on the right side while those smaller are on the left side of the pivot index value
 ### Example1
 > input: [5, 7, 3, 4, 20], 0
+
 > output: [3, 4, 5, 7, 20]
 
 ### Example2
