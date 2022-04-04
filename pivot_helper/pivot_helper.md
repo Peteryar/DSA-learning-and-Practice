@@ -6,6 +6,7 @@
 
 ### Example2
 > input: [5, 7, 15, 25 12, 37, 19, 17, 27, 34], 3
+
 > output [5, 7, 15, 12, 19, 17, 25, 37, 27, 34]
 
 ## idea behind algorithm
