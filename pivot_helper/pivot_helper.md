@@ -25,7 +25,7 @@
 3. return arr at the end
 
 ## BigO of pivot_helper Solution
-Time complexity
-> O(n)
-space complexity
-> O(1)
+
+> Time complexity O(n)
+
+> space complexity O(1)
