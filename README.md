@@ -11,4 +11,4 @@
 
 3. Always read the markdown file first before looking at the solutions.
 
-> Have any question or want to interview me? Drop me a mail at [peteryar19@gmail.com&&subject=DSARepoResponse]
+> Have any question or want to interview me? Drop me a mail at [peteryar19@gmail.com]
