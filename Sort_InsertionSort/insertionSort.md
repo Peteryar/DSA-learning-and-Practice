@@ -2,10 +2,12 @@
 > write a function that takes an array of integers and sort them from smallest to biggest using insertion sort algorithm
 ### Example1
 > input: [5, 7, 3, 4, 20]
+
 > output: [3, 4, 5, 7, 20]
 
 ### Example2
 > input: [5, 7, 15, 25 12, 37, 19, 17, 27, 34]
+
 > output [5, 7, 12, 15, 17,  19, 25, 27, 34, 37]
 
 ## idea behind algorithm
@@ -25,4 +27,6 @@ if the loop runs, arr[j] > currentEl
 
 ## BigO of insertionSort Solution
 
-> O(n)
+>Time complexity O(n^2)
+
+>Space complexity O(1)

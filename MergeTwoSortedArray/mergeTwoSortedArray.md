@@ -3,10 +3,12 @@
 
 ### Example1
 > input: [6, 10, 12, 13, 21], [5, 15]
+
 > output: [5, 6, 10, 12, 13, 15, 21]
 
 ### Example2
 > input: [5, 7, 15, 25], [12, 17, 27, 34]
+
 > output [5, 7, 12, 15, 17, 25, 27, 34]
 
 ## Pseudo
@@ -22,4 +24,6 @@
 
 ## BigO of mergeTwoSortedArray Solution
 
-> O(n+m)
+> Time complexity O(n+m)
+
+> Space complexity O(1)

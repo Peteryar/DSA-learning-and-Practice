@@ -10,4 +10,4 @@ function getDigit(number, pos){
     return digit;
 }
 
-console.log(getDigit(-301, 2))
+console.log(getDigit(-10301, 4))

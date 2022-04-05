@@ -25,7 +25,7 @@
 
 
 ## BigO of getDigit Solution
-Time complexity
-> O(1)
-space complexity
-> O(1)
+
+> Time complexity O(1)
+
+> space complexity O(1)
