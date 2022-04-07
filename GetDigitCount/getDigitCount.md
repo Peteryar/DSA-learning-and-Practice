@@ -26,8 +26,20 @@ This algorithm is required in the radix sort algorithm
 4. write a while loop that runs as far as tempVal/10 >= 1
     - increament counter by 1
     - reassign tempVal to be tempVal/10
-## BigO of quickSort Solution
+
+## Alt Pseudo
+1. write a function that takes numb as parameter
+2. if numb is zero return 1
+3. else return Logarithm to base 10 of the absolute value of numb + 1
+
+## BigO of getDigitCount Solution
 
 >Time complexity O(n) where n is the length of the number
+
+>Space complexity O(1)
+
+## BigO of getDigitCountAlt Solution
+
+>Time complexity O(1) 
 
 >Space complexity O(1)
