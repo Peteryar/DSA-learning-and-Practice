@@ -50,7 +50,7 @@ class SinglyLinkedList {
         if (!this.head) {
             this.head = newNode;
             this.tail = newNode;
-        }else{
+        } else {
             let currentHead = this.head;
 
             this.head = newNode;
@@ -58,6 +58,38 @@ class SinglyLinkedList {
         }
         this.length++
         return this.length;
+    }
+    get(index) {
+        
+        let node = this.head;
+        for (let i = 0; i < index; i++) {
+            node = node.next
+        }
+        return node
+    }
+    set(val, index) {
+
+        let newNode = new Node(val);
+        let postNode = this.head;
+
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = newNode
+        } else {
+            for (let i = 0; i < index - 1; i++) {
+                postNode = postNode.next;
+                console.log('i-->', i)
+            }
+            if (index == 0) {
+                newNode.next = this.head;
+                this.head = newNode;
+            } else {
+                newNode.next = postNode.next;
+                postNode.next = newNode
+            }
+            this.length++
+        }
+        return this
     }
 }
 
@@ -68,8 +100,6 @@ list.push('Meteor');
 list.push({ country: 'Niger', state: 'Bayelsa' });
 list.push(['Blink', 2, 'Age'])
 
-console.log('shift', list.shift());
-console.log('after shift()', list);
-list.unshift('Plant')
+console.log(list.set('Flake', 0))
 
-console.log('after unshift()', list);
+console.log(list.get(1))
