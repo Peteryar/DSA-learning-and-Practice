@@ -3,73 +3,34 @@
 function longestUniqueCharacters(str){
     let freqCounter = {};
     
-    let opStr = str.toLowerCase();
+    str = str.toLowerCase();
 
     let p1 = 0;
-    let p2 = 1;
+    let p2 = 0;
 
-    freqCounter = {[opStr[p1]]:1, [opStr[p2]]:1};
+    let lookUp;
+    let temp;
+    let long = ""
 
-    let longStr = opStr[p1] + opStr[p2];
-    let tempStr = longStr;
+    while(p2 < str.length){
+       lookUp = freqCounter[str[p2]];
 
-    while(p2 < opStr.length){
-       p2++
-
-       let lookUp = freqCounter[opStr[p2]];
-
-       if(!lookUp){
-           freqCounter[opStr[p2]] = 1;
-           tempStr+= opStr[p2]
-           longStr = tempStr.length> longStr.length?tempStr:longStr;
+       if(lookUp){
+         if(lookUp > p1){
+             p1 = str[lookUp] == str[p2]?p2:lookUp
+         }
+         freqCounter[str[p2]] = p2+1;
+         p2++
+         temp = str.slice(p1, p2);
        }else{
-           tempStr = tempStr.slice(1) + str[p2];
-           longStr = tempStr.length> longStr.length?tempStr:longStr;
+        freqCounter[str[p2]] = p2+1;
+        p2++;
+        temp = str.slice(p1, p2);
        }
+       long = long.length > temp.length?long:temp
     }
 
-    return longStr
+    return long
 }
 
-//longestUniqueCharacters('blackberry');
-
-function getLongestUniqueChar(str){
-    let counter = {};
-    let tempStr = '';
-    let longStr = '';
-
-    let p1=0;
-    let p2 =0;
-
-    while(p2<str.length){
-         counter[str[p2]] = counter[str[p2]]+ 1 || 1;
-        console.log(p1, p2)
-        if(str[p2] == str[p2-1]){
-            
-            p2+=1;
-            p1 = p2
-
-            tempStr = str[p2]
-            longStr = tempStr.length>longStr.length?tempStr:longStr;
-            counter[str[p2]] = 1
-        }else{
-
-            if(counter[str[p2]] == 2){
-                p1+=1;
-                tempStr = tempStr 
-                longStr = tempStr.length>longStr.length?tempStr:longStr;
-
-                counter[str[p2]] = 1
-            }else{
-                 tempStr = str.substr(p1, p2);
-                 longStr = tempStr.length>longStr.length?tempStr:longStr;
-            }
-        }
-       
-        console.log('longStr--->', longStr)
-        p2++
-    }
-    return longStr
-}
-
-getLongestUniqueChar('bbbbblackberry')
+console.log(longestUniqueCharacters('school'));
